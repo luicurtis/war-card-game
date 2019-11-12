@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var playerCard: UIImageView!
+    
+    @IBOutlet weak var cpuCard: UIImageView!
+    
+    @IBOutlet weak var playerScorelabel: UILabel!
+    
+    @IBOutlet weak var cpuScorelabel: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -17,6 +25,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func dealTapped(_ sender: Any) {
+        // Randomize a number
+        // Need to randomize from 2 to 14 incluside
+        // Gives numbers from 0 to 12, then add 2
+        let playerNumber = arc4random_uniform(13) + 2
+        playerCard.image = UIImage(named: "card" + String(playerNumber))
+        
+        let cpuNumber = arc4random_uniform(13) + 2
+        cpuCard.image = UIImage(named: "card" + String(cpuNumber))
 
+    }
+    
 }
 
