@@ -1,2 +1,4 @@
 # war-card-game
-iOS War Card Game
+Simple iOS War Card Game
+
+Assets provided from CodeWithChris (youtube).
